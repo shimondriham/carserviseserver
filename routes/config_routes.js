@@ -16,10 +16,10 @@ exports.corsAccessControl = (app) => {
     res.set('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,auth-token,x-api-key');
     next();
   });
-}
+};
 
 exports.routesInit = (app) => {
-  app.use("/",indexR);
+  app.use("/", indexR);
   app.use("/users", usersR);
   app.use("/rental", rentalR);
   app.use("/sale", saleR);
@@ -28,7 +28,7 @@ exports.routesInit = (app) => {
   app.use("/categoriesRental", categoriesRentalR);
   app.use("/categoriesSale", categoriesSaleR);
   app.use("/cooperative", cooperativeR);
-  app.use((req,res) => {
-    res.status(404).json({msg_error:"Url not found , 404!"})
+  app.use((req, res) => {
+    res.status(404).json({ msg_error: "Url not found , 404!" })
   })
-}
+};
