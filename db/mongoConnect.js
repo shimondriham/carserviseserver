@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const {secret} = require("../config/config")
 
-
 main().catch(err => console.log(err));
 
 async function main() {
